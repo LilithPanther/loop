@@ -1,0 +1,36 @@
+Exercice 10 : while True:
+    user_input = input("Veuillez entrer un nombre de 6 chiffres : ")
+
+    if len(user_input) == 6 and user_input.isdigit():
+        digit_sum = sum(int(digit) for digit in user_input)
+        print(f"La somme des chiffres est : {digit_sum}")
+        break
+    else:
+        print("Erreur : Veuillez entrer un nombre valide composé de 6 chiffres.") 
+
+Exercice 6 : 
+
+
+while True:
+    user_input = input("Veuillez entrer un numéro : ")
+    try:
+        int(user_input)
+        print("Félicitations ! Votre entrée est un numéro valide.")
+        break
+    except ValueError:
+        print("Erreur : Veuillez entrer un numéro valide (seules les chiffres sont autorisés).")
+
+Exercice 9: 
+
+word = input("Veuillez entrer une chaîne de caractères : ")
+
+char_count = {}
+
+for char in word:
+    if char in char_count:
+        char_count[char] += 1
+    else:
+        char_count[char] = 1
+
+for char, count in char_count.items():
+    print(f"{char}: {count}")
